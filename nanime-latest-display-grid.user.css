@@ -1,0 +1,45 @@
+/* ==UserStyle==
+@name           nanime-latest-display-grid
+@namespace      https://github.com/dnek
+@version        1.0.0
+@description    Displays the latest video list of N-ANIME in a grid.
+@author         DNEK <dnek.app@gmail.com> (https://dnek.net/)
+@homepageURL    https://github.com/dnek/nanime-latest-display-grid
+@updateURL      https://github.com/dnek/nanime-latest-display-grid/raw/master/nanime-latest-display-grid.user.css
+@license        MIT
+@preprocessor   less
+==/UserStyle== */
+@-moz-document url-prefix("https://anime.nicovideo.jp/latest/"),
+url-prefix("https://anime.nicovideo.jp/free/") {
+    main > section:last-child > ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 8px;
+        > li > a > div:last-child {
+            margin-left: 0;
+            padding-left: 0;
+            > p:nth-child(2) {
+                margin-top: 0;
+                height: 64px;
+                overflow-y: hidden;
+                @media only screen and (max-width: 880px) {
+                    line-height: 14px;
+                    font-size: 12px;
+                    height: 56px;
+                }
+            }
+            > div > span {
+                @media only screen and (max-width: 880px) {
+                    margin-left: .5em;
+                    font-size: 8px;
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}
