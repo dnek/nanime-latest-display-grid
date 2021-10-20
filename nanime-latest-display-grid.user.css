@@ -15,7 +15,7 @@ url-prefix("https://anime.nicovideo.jp/free/") {
     main > section:last-child > ul {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-gap: 8px;
+        gap: 8px;
         > li > a > div:last-child {
             margin-left: 0;
             padding-left: 0;
