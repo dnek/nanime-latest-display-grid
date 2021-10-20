@@ -11,34 +11,38 @@
 @preprocessor   less
 ==/UserStyle== */
 @-moz-document url-prefix("https://anime.nicovideo.jp/latest/"),
-url-prefix("https://anime.nicovideo.jp/free/") {
+    url-prefix("https://anime.nicovideo.jp/free/") {
     main > section:last-child > ul {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-gap: 8px;
-        > li > a > div:last-child {
-            margin-left: 0;
-            padding-left: 0;
-            > p:nth-child(2) {
-                margin-top: 0;
-                height: 64px;
-                overflow-y: hidden;
-                @media only screen and (max-width: 880px) {
-                    line-height: 14px;
-                    font-size: 12px;
-                    height: 56px;
+        gap: 8px;
+        > li {
+            min-width: 0;
+            > a > div:last-child {
+                margin-left: 0;
+                padding-left: 0;
+                > p:nth-child(2) {
+                    margin-top: 0;
+                    height: 64px;
+                    overflow-y: hidden;
+                    overflow-wrap: break-word;
+                    @media only screen and (max-width: 880px) {
+                        line-height: 14px;
+                        font-size: 12px;
+                        height: 56px;
+                    }
                 }
-            }
-            > div > span {
-                @media only screen and (max-width: 880px) {
-                    margin-left: .5em;
-                    font-size: 8px;
-                }
-                &:first-child {
-                    margin-left: 0;
-                }
-                &:last-child {
-                    display: none;
+                > div > span {
+                    @media only screen and (max-width: 880px) {
+                        margin-left: .5em;
+                        font-size: 8px;
+                    }
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                    &:last-child {
+                        display: none;
+                    }
                 }
             }
         }
