@@ -12,6 +12,9 @@
 ==/UserStyle== */
 @-moz-document url-prefix("https://anime.nicovideo.jp/latest/"),
     url-prefix("https://anime.nicovideo.jp/free/") {
+    main > section:not(:last-child) > *:not(:first-child) {
+        display: none;
+    }
     main > section:last-child > ul {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
